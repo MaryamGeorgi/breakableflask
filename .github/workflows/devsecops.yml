@@ -25,8 +25,9 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'config'
-          scan-ref: 'Dockerfile'
-          severity: 'HIGH,CRITICAL'
+          scan-ref: '.'
+          severity: 'CRITICAL'
+          exit-code: '1'
 
   Deploy:
     runs-on: ubuntu-latest
